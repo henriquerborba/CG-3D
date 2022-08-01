@@ -7,19 +7,23 @@
 #include <vector>
 
 #include "canvas/gl_canvas2d.h"
-#include "Vector2.h"
+#include "vectors/Vector2.h"
+#include "windows/window.h"
+#include "windows/draw/draw_window.h"
 
 using namespace std;
 
-int screenWidth = 800, screenHeight = 800; // largura e altura inicial da tela . Alteram com o redimensionamento de tela.
-int mouseX, mouseY;                        // variaveis globais do mouse para poder exibir dentro da render().
+int screenWidth = 1368, screenHeight = 768; // largura e altura inicial da tela . Alteram com o redimensionamento de tela.
+int mouseX, mouseY;                         // variaveis globais do mouse para poder exibir dentro da render().
+
+Window *window = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0)); // cria uma janela de desenho.
 
 // funcao chamada continuamente. Deve-se controlar o que desenhar por meio de variaveis globais
 // Todos os comandos para desenho na canvas devem ser chamados dentro da render().
 // Deve-se manter essa fun��o com poucas linhas de codigo.
 void render()
 {
-   CV::text(20, 500, "Trabalho 4 - Henrique");
+   window->render();
 }
 
 // funcao chamada toda vez que uma tecla for pressionada.
@@ -55,12 +59,13 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
    mouseX = x; // guarda as coordenadas do mouse para exibir dentro da render()
    mouseY = y;
 
+   window->mouse(button, state, wheel, direction, x, y);
+
    printf("\nmouse %d %d %d %d %d %d", button, state, wheel, direction, x, y);
 }
 
 int main(void)
 {
-
    CV::init(&screenWidth, &screenHeight, "Trabalho 4 - Henrique Rodrigues de Borba");
    CV::run();
 }
