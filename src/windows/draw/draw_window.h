@@ -11,15 +11,13 @@ class DrawWindow : public Window
 {
 private:
     int selected = -1;
-    vector<Point> points;
 
 public:
+    vector<Point> points;
     DrawWindow() = default;
     DrawWindow(int width, int height, Vector2 pos);
     virtual ~DrawWindow() = default;
     virtual void render();
-    virtual void keyboard(int key);
-    virtual void keyboardUp(int key);
     virtual void mouse(int button, int state, int wheel, int direction, int x, int y);
 };
 

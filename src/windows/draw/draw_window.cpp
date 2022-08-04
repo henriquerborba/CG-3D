@@ -20,14 +20,6 @@ void DrawWindow::render()
     }
 }
 
-void DrawWindow::keyboard(int key)
-{
-}
-
-void DrawWindow::keyboardUp(int key)
-{
-}
-
 void DrawWindow::mouse(int button, int state, int wheel, int direction, int x, int y)
 {
     // verifica se mouse está dentro da janela

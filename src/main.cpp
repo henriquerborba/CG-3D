@@ -10,20 +10,23 @@
 #include "vectors/Vector2.h"
 #include "windows/window.h"
 #include "windows/draw/draw_window.h"
+#include "windows/view/view_window.h"
 
 using namespace std;
 
 int screenWidth = 1368, screenHeight = 768; // largura e altura inicial da tela . Alteram com o redimensionamento de tela.
 int mouseX, mouseY;                         // variaveis globais do mouse para poder exibir dentro da render().
 
-Window *window = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0)); // cria uma janela de desenho.
+Window *drawWindow = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0));                           // cria uma janela de desenho.
+Window *viewWindow = new ViewWindow(screenWidth / 2, screenHeight, Vector2(screenWidth / 2, 0), drawWindow); // cria uma janela de visualização.
 
 // funcao chamada continuamente. Deve-se controlar o que desenhar por meio de variaveis globais
 // Todos os comandos para desenho na canvas devem ser chamados dentro da render().
 // Deve-se manter essa fun��o com poucas linhas de codigo.
 void render()
 {
-   window->render();
+   drawWindow->render();
+   viewWindow->render();
 }
 
 // funcao chamada toda vez que uma tecla for pressionada.
@@ -59,7 +62,8 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
    mouseX = x; // guarda as coordenadas do mouse para exibir dentro da render()
    mouseY = y;
 
-   window->mouse(button, state, wheel, direction, x, y);
+   drawWindow->mouse(button, state, wheel, direction, x, y);
+   viewWindow->mouse(button, state, wheel, direction, x, y);
 
    printf("\nmouse %d %d %d %d %d %d", button, state, wheel, direction, x, y);
 }

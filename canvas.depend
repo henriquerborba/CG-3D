@@ -175,7 +175,7 @@
 	<GL/freeglut_ext.h>
 	"../Vector2.h"
 
-1659301406 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\canvas\gl_canvas2d.cpp
+1659316796 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\canvas\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
@@ -221,10 +221,10 @@
 	"windows/window.h"
 	"windows/draw/draw_window.h"
 
-1659313663 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\window.h
+1659655031 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\window.h
 	"../vectors/Vector2.h"
 
-1659315474 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
+1659655343 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
 	<vector>
 	"../window.h"
 	"../../point/point.h"
@@ -236,12 +236,34 @@
 1659315206 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659316227 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1659655050 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 
 1659316063 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659302980 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1659655365 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+	"view_window.h"
+
+1659655319 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+	<vector>
+	"../window.h"
+	"../draw/draw_window.h"
+	"../../point/point.h"
+
+1659655714 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.cpp
+	<stdexcept>
+	<iostream>
+	<iomanip>
+	<math.h>
+	"matrix.h"
+
+1659655805 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.h
+	<iostream>
+	"../vectors/vector2.h"
+	"../vectors/Vector3.h"
+
+1659655496 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
+	<math.h>
 

@@ -15,8 +15,6 @@ protected:
 public:
     virtual ~Window() = default;
     virtual void render() = 0;
-    virtual void keyboard(int key) = 0;
-    virtual void keyboardUp(int key) = 0;
     virtual void mouse(int button, int state, int wheel, int direction, int x, int y) = 0;
 };
 
