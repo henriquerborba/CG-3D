@@ -12,7 +12,7 @@ void DrawWindow::render()
 {
     CV::color(0, 0, 0);
     CV::rect(pos, Vector2(pos.x + width, pos.y + height));
-    Utils::bezierCurve(points);
+    curve = Utils::bezierCurve(points);
 
     for (auto p : points)
     {

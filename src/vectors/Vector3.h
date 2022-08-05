@@ -35,6 +35,14 @@ public:
         z = z / norm;
     }
 
+    Vector2 project(float d)
+    {
+        Vector2 p;
+        p.x = (x * d) / z;
+        p.y = (y * d) / z;
+        return p;
+    }
+
     Vector3 operator-(const Vector3 &v)
     {
         Vector3 aux(x - v.x, y - v.y, z - v.z);

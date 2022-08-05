@@ -43,11 +43,29 @@
 			<Add library="../lib/libopengl32.a" />
 			<Add library="../lib/freeglut.lib" />
 		</Linker>
+		<Unit filename="include/GL/freeglut.h" />
+		<Unit filename="include/GL/freeglut_ext.h" />
+		<Unit filename="include/GL/freeglut_std.h" />
 		<Unit filename="include/GL/glut.h" />
-		<Unit filename="src/Vector2.h" />
-		<Unit filename="src/gl_canvas2d.cpp" />
-		<Unit filename="src/gl_canvas2d.h" />
+		<Unit filename="src/GL/freeglut.h" />
+		<Unit filename="src/GL/freeglut_ext.h" />
+		<Unit filename="src/GL/freeglut_std.h" />
+		<Unit filename="src/GL/glut.h" />
+		<Unit filename="src/canvas/gl_canvas2d.cpp" />
+		<Unit filename="src/canvas/gl_canvas2d.h" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/matrix/matrix.cpp" />
+		<Unit filename="src/matrix/matrix.h" />
+		<Unit filename="src/point/point.cpp" />
+		<Unit filename="src/point/point.h" />
+		<Unit filename="src/utils/Utils.h" />
+		<Unit filename="src/vectors/Vector2.h" />
+		<Unit filename="src/vectors/Vector3.h" />
+		<Unit filename="src/windows/draw/draw_window.cpp" />
+		<Unit filename="src/windows/draw/draw_window.h" />
+		<Unit filename="src/windows/view/view_window.cpp" />
+		<Unit filename="src/windows/view/view_window.h" />
+		<Unit filename="src/windows/window.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

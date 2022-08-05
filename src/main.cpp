@@ -17,8 +17,8 @@ using namespace std;
 int screenWidth = 1368, screenHeight = 768; // largura e altura inicial da tela . Alteram com o redimensionamento de tela.
 int mouseX, mouseY;                         // variaveis globais do mouse para poder exibir dentro da render().
 
-Window *drawWindow = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0));                           // cria uma janela de desenho.
-Window *viewWindow = new ViewWindow(screenWidth / 2, screenHeight, Vector2(screenWidth / 2, 0), drawWindow); // cria uma janela de visualização.
+DrawWindow *drawWindow = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0));                           // cria uma janela de desenho.
+ViewWindow *viewWindow = new ViewWindow(screenWidth / 2, screenHeight, Vector2(screenWidth / 2, 0), drawWindow); // cria uma janela de visualização.
 
 // funcao chamada continuamente. Deve-se controlar o que desenhar por meio de variaveis globais
 // Todos os comandos para desenho na canvas devem ser chamados dentro da render().

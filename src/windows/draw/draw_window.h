@@ -13,6 +13,7 @@ private:
     int selected = -1;
 
 public:
+    vector<Vector2> curve;
     vector<Point> points;
     DrawWindow() = default;
     DrawWindow(int width, int height, Vector2 pos);
