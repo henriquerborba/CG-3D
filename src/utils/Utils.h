@@ -14,7 +14,7 @@ public:
         CV::color(0, 0, 0);
         int n = pontos.size() - 1;
         int nFatorial = factorial(n);
-        for (float t = 0; t < 1; t += 0.01)
+        for (float t = 0; t < 1; t += 0.1)
         {
             Vector2 p = Vector2(0, 0);
             for (int i = 0; i <= n; i++)

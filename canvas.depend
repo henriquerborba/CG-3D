@@ -242,14 +242,14 @@
 	"./draw_window.h"
 	"../../utils/Utils.h"
 
-1659672530 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
+1659767686 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659676267 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1659723995 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
-1659672862 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+1659677742 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
 	<vector>
 	"../window.h"
 	"../draw/draw_window.h"
