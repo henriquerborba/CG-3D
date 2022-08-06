@@ -222,13 +222,15 @@
 	"windows/draw/draw_window.h"
 	"windows/view/view_window.h"
 
-1659656348 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\window.h
+1659823146 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\window.h
 	"../vectors/Vector2.h"
+	"../widgets/button/button.h"
 
-1659768691 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
+1659824053 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
 	<vector>
 	"../window.h"
 	"../../point/point.h"
+	<functional>
 
 1659768690 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.h
 	"../canvas/gl_canvas2d.h"
@@ -238,14 +240,14 @@
 1659768690 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659768691 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1659825831 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 
 1659769857 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659771064 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1659817933 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
@@ -270,4 +272,25 @@
 
 1659769799 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
 	<math.h>
+
+1659824230 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\button\button.h
+	"../widget.h"
+	"../../utils/colors.h"
+	<functional>
+
+1659824991 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.h
+	"../utils/colors.h"
+	<functional>
+
+1659818493 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\colors.h
+
+1659825807 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\button\button.cpp
+	<iostream>
+	"../../widgets/button/button.h"
+	"../../canvas/gl_canvas2d.h"
+	"../widget.h"
+
+1659824529 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.cpp
+	"widget.h"
+	<iostream>
 

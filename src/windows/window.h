@@ -2,6 +2,7 @@
 #define __WINDOW__H__
 
 #include "../vectors/Vector2.h"
+#include "../widgets/button/button.h"
 
 class Window
 {
@@ -11,6 +12,7 @@ protected:
 
     int width, height;
     Vector2 pos;
+    vector<Widget *> widgets;
 
 public:
     virtual ~Window() = default;

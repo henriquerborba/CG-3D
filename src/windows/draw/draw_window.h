@@ -4,6 +4,7 @@
 #include <vector>
 #include "../window.h"
 #include "../../point/point.h"
+#include <functional>
 
 using namespace std;
 
@@ -11,6 +12,10 @@ class DrawWindow : public Window
 {
 private:
     int selected = -1;
+    function<void(void)> clearPoints = [=]()
+    {
+        points.clear();
+    };
 
 public:
     vector<Vector2> curve;

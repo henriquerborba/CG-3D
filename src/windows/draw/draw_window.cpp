@@ -6,6 +6,10 @@ DrawWindow::DrawWindow(int width, int height, Vector2 pos)
     this->width = width;
     this->height = height;
     this->pos = pos;
+    widgets.push_back(new Button("Clear",
+                                 new Color(255, 0, 0),
+                                 new Color(0), 50, height - 50, 100, 50,
+                                 clearPoints));
 }
 
 void DrawWindow::render()
@@ -13,6 +17,11 @@ void DrawWindow::render()
     CV::color(0, 0, 0);
     CV::rect(pos, Vector2(pos.x + width, pos.y + height));
     curve = Utils::bezierCurve(points);
+
+    for (auto widget : widgets)
+    {
+        widget->Render();
+    }
 
     for (auto p : points)
     {
@@ -61,5 +70,9 @@ void DrawWindow::mouse(int button, int state, int wheel, int direction, int x, i
         {
             selected = -1;
         }
+    }
+    for (auto widget : widgets)
+    {
+        widget->onClick(x, y, state);
     }
 }
