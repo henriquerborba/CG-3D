@@ -14,7 +14,7 @@ class ViewWindow : public Window
 private:
     DrawWindow *drawWindow;
     vector<Vector2> points;
-    vector<vector<Vector2>> pointsMatrix;
+    vector<vector<Vector3>> pointsMatrix;
 
 public:
     ViewWindow() = default;
@@ -22,8 +22,9 @@ public:
     virtual ~ViewWindow() = default;
     virtual void render();
     virtual void mouse(int button, int state, int wheel, int direction, int x, int y);
-    vector<vector<Vector2>> sweep(vector<Vector2> points);
+    vector<vector<Vector3>> sweep(vector<Vector2> points);
     void draw(vector<vector<Vector2>> matrix);
+    vector<vector<Vector2>> projectPoints(vector<vector<Vector3>> matrix, bool perspectiveProjection);
 };
 
 #endif // __VIEW_WINDOW_H__

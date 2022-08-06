@@ -35,7 +35,12 @@ public:
         z = z / norm;
     }
 
-    Vector2 project(float d)
+    Vector2 orthographicProjection()
+    {
+        return Vector2(x, y);
+    }
+
+    Vector2 perspectiveProjection(float d)
     {
         Vector2 p;
         p.x = (x * d) / z;

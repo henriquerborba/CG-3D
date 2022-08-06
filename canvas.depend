@@ -209,7 +209,7 @@
 	<iostream>
 	<math.h>
 
-1659662515 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\main.cpp
+1659771079 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -225,31 +225,31 @@
 1659656348 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\window.h
 	"../vectors/Vector2.h"
 
-1659672578 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
+1659768691 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
 	<vector>
 	"../window.h"
 	"../../point/point.h"
 
-1659661712 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.h
+1659768690 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.h
 	"../canvas/gl_canvas2d.h"
 	"../vectors/Vector2.h"
 	"../vectors/Vector3.h"
 
-1659660659 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
+1659768690 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659672600 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1659768691 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 
-1659767686 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
+1659769857 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659723995 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1659771064 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
-1659677742 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+1659770691 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
 	<vector>
 	"../window.h"
 	"../draw/draw_window.h"
@@ -268,6 +268,6 @@
 	"../vectors/vector2.h"
 	"../vectors/Vector3.h"
 
-1659661699 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
+1659769799 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
 	<math.h>
 
