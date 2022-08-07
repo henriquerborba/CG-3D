@@ -13,7 +13,6 @@ CheckBox::CheckBox(int x, int y, int width, int height, function<void(void)> onC
 
 CheckBox::CheckBox(int x, int y, int width, int height, Color *color, const char *description, function<void(void)> onClick) : Widget(x, y, width, height)
 {
-    cout << "x" << x + width << "y" << y + height << endl;
     checked = false;
     callBack = [=]()
     {

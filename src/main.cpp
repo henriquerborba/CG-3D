@@ -25,29 +25,15 @@ ViewWindow *viewWindow = new ViewWindow(screenWidth / 2, screenHeight, Vector2(s
 // Deve-se manter essa fun��o com poucas linhas de codigo.
 void render()
 {
-   drawWindow->render();
    viewWindow->render();
+   drawWindow->render();
 }
 
 // funcao chamada toda vez que uma tecla for pressionada.
 void keyboard(int key)
 {
-   printf("\nTecla: %d", key);
-   switch (key)
-   {
-   // seta para esquerda
-   case 200:
-      break;
-   // seta para cima
-   case 201:
-      break;
-   // seta para direita
-   case 202:
-      break;
-   // seta para baixo
-   case 203:
-      break;
-   }
+   cout << "key: " << key << endl;
+   viewWindow->keyboard(key);
 }
 
 // funcao chamada toda vez que uma tecla for liberada

@@ -17,6 +17,8 @@ private:
     vector<Vector2> points;
     vector<vector<Vector3>> pointsMatrix;
     bool isPerspective = false;
+    float translateX, translateY, translateZ;
+    int rotationX = 0, rotationY = 0, rotationZ = 0;
 
 public:
     ViewWindow() = default;
@@ -24,6 +26,7 @@ public:
     virtual ~ViewWindow() = default;
     virtual void render();
     virtual void mouse(int button, int state, int wheel, int direction, int x, int y);
+    void keyboard(int key);
     vector<vector<Vector3>> sweep(vector<Vector2> points);
     void draw(vector<vector<Vector2>> matrix);
     vector<vector<Vector2>> projectPoints(vector<vector<Vector3>> matrix, bool perspectiveProjection);

@@ -59,8 +59,15 @@
 		<Unit filename="src/point/point.cpp" />
 		<Unit filename="src/point/point.h" />
 		<Unit filename="src/utils/Utils.h" />
+		<Unit filename="src/utils/colors.h" />
 		<Unit filename="src/vectors/Vector2.h" />
 		<Unit filename="src/vectors/Vector3.h" />
+		<Unit filename="src/widgets/button/Button.cpp" />
+		<Unit filename="src/widgets/button/button.h" />
+		<Unit filename="src/widgets/checkbox/checkbox.cpp" />
+		<Unit filename="src/widgets/checkbox/checkbox.h" />
+		<Unit filename="src/widgets/widget.cpp" />
+		<Unit filename="src/widgets/widget.h" />
 		<Unit filename="src/windows/draw/draw_window.cpp" />
 		<Unit filename="src/windows/draw/draw_window.h" />
 		<Unit filename="src/windows/view/view_window.cpp" />

@@ -7,8 +7,11 @@ ViewWindow::ViewWindow(int width, int height, Vector2 pos, DrawWindow *drawWindo
     this->height = height;
     this->pos = pos;
     this->drawWindow = drawWindow;
+    translateX = width / 2;
+    translateY = 0;
+    translateZ = 300;
 
-    widgets.push_back(new CheckBox(pos.x + 10, height - 20, 20, 20, new Color(4), "Perspectiva", [=]()
+    widgets.push_back(new CheckBox(pos.x + 10, height - 30, 20, 20, new Color(4), "Perspectiva", [=]()
                                    { isPerspective = !isPerspective; }));
 }
 
@@ -43,6 +46,37 @@ void ViewWindow::mouse(int button, int state, int wheel, int direction, int x, i
     }
 }
 
+void ViewWindow::keyboard(int key)
+{
+    switch (key)
+    {
+    // seta para esquerda
+    case 200:
+        translateX--;
+        break;
+    // seta para cima
+    case 201:
+        translateY++;
+        break;
+    // seta para direita
+    case 202:
+        translateX++;
+        break;
+    // seta para baixo
+    case 203:
+        translateY--;
+        break;
+    // mais
+    case 43:
+        translateZ++;
+        break;
+    // menos
+    case 45:
+        translateZ--;
+        break;
+    }
+}
+
 vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points)
 {
     vector<vector<Vector3>> matrix(18);
@@ -54,7 +88,8 @@ vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points)
             float angle = c * 20;
             Vector3 p = Vector3(points[l].x, points[l].y, 0);
             p = Matrix::rotateY(angle) * p;
-            p = Matrix::translate3d(width / 2, 0, 300) * p;
+            p = Matrix::rotateX(rotationX) * Matrix::rotateY(rotationY) * Matrix::rotateZ(rotationZ) * p;
+            p = Matrix::translate3d(translateX, translateY, translateZ) * p;
             matrix[c].push_back(p);
         }
     }
@@ -87,7 +122,7 @@ vector<vector<Vector2>> ViewWindow::projectPoints(vector<vector<Vector3>> matrix
         {
             projectedMatrix[c].push_back(
                 perspectiveProjection
-                    ? matrix[c][l].perspectiveProjection(300)
+                    ? matrix[c][l].perspectiveProjection(translateZ)
                     : matrix[c][l].orthographicProjection());
         }
     }

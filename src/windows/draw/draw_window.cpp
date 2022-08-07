@@ -1,5 +1,6 @@
 #include "./draw_window.h"
 #include "../../utils/Utils.h"
+#include "../../utils/Colors.h"
 
 DrawWindow::DrawWindow(int width, int height, Vector2 pos)
 {
@@ -14,6 +15,8 @@ DrawWindow::DrawWindow(int width, int height, Vector2 pos)
 
 void DrawWindow::render()
 {
+    CV::color(Color::white);
+    CV::rectFill(pos, Vector2(width, height));
     CV::color(0, 0, 0);
     CV::rect(pos, Vector2(pos.x + width, pos.y + height));
     curve = Utils::bezierCurve(points);
