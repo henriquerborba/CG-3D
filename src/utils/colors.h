@@ -56,7 +56,22 @@ public:
     float *get()
     {
         return color;
-    }
+    };
+
+    static const int black = 0;
+    static const int gray = 1;
+    static const int red = 2;
+    static const int green = 3;
+    static const int blue = 4;
+    static const int cyan = 5;
+    static const int magenta = 6;
+    static const int yellow = 7;
+    static const int orange = 8;
+    static const int brown = 9;
+    static const int olive = 10;
+    static const int teal = 11;
+    static const int purple = 12;
+    static const int white = 13;
 };
 
 #endif // COLOR_H_INCLUDED

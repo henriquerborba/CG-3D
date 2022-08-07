@@ -7,6 +7,9 @@ ViewWindow::ViewWindow(int width, int height, Vector2 pos, DrawWindow *drawWindo
     this->height = height;
     this->pos = pos;
     this->drawWindow = drawWindow;
+
+    widgets.push_back(new CheckBox(pos.x + 10, height - 20, 20, 20, new Color(4), "Perspectiva", [=]()
+                                   { isPerspective = !isPerspective; }));
 }
 
 void ViewWindow::render()
@@ -16,7 +19,12 @@ void ViewWindow::render()
     CV::rect(Vector2(0, 0), Vector2(width, height));
     points = drawWindow->curve;
     pointsMatrix = sweep(points);
-    draw(projectPoints(pointsMatrix, true));
+    draw(projectPoints(pointsMatrix, isPerspective));
+    CV::translate(0, 0);
+    for (auto widget : widgets)
+    {
+        widget->Render();
+    }
 }
 
 void ViewWindow::mouse(int button, int state, int wheel, int direction, int x, int y)
@@ -28,6 +36,10 @@ void ViewWindow::mouse(int button, int state, int wheel, int direction, int x, i
         if (button == 0 && state == 0)
         {
         }
+    }
+    for (auto widget : widgets)
+    {
+        widget->onClick(x, y, state);
     }
 }
 
@@ -52,13 +64,16 @@ vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points)
 
 void ViewWindow::draw(vector<vector<Vector2>> matrix)
 {
-    for (int c = 0; c < matrix.size(); c++)
+    for (int l = 0; l < matrix.size(); l++)
     {
-        for (int l = 0; l < matrix[c].size(); l++)
+        for (int c = 0; c < matrix[l].size(); c++)
         {
-            CV::line(matrix[c][l], matrix[c][(l + 1) % matrix[c].size()]);
-            CV::line(matrix[c][l], matrix[(c + 1) % matrix.size()][l]);
-            CV::line(matrix[c][l], matrix[(c + 1) % matrix.size()][(l + 1) % matrix[c].size()]);
+            if (c != matrix[l].size() - 1)
+            {
+                CV::line(matrix[l][c], matrix[(l + 1) % matrix.size()][c]);
+                CV::line(matrix[l][c], matrix[l][(c + 1) % matrix[l].size()]);
+                CV::line(matrix[l][c], matrix[(l + 1) % matrix.size()][(c + 1) % matrix[l].size()]);
+            }
         }
     }
 }

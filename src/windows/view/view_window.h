@@ -6,6 +6,7 @@
 #include "../draw/draw_window.h"
 #include "../../vectors/vector3.h"
 #include "../../point/point.h"
+#include "../../widgets/checkbox/checkbox.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ private:
     DrawWindow *drawWindow;
     vector<Vector2> points;
     vector<vector<Vector3>> pointsMatrix;
+    bool isPerspective = false;
 
 public:
     ViewWindow() = default;

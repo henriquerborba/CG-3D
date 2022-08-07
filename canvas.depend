@@ -240,23 +240,24 @@
 1659768690 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659825831 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1659827592 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 
 1659769857 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659817933 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1659832971 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
-1659770691 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+1659831159 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
 	<vector>
 	"../window.h"
 	"../draw/draw_window.h"
 	"../../vectors/vector3.h"
 	"../../point/point.h"
+	"../../widgets/checkbox/checkbox.h"
 
 1659656348 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.cpp
 	<stdexcept>
@@ -278,13 +279,14 @@
 	"../../utils/colors.h"
 	<functional>
 
-1659824991 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.h
+1659831866 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.h
 	"../utils/colors.h"
 	<functional>
+	<iostream>
 
-1659818493 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\colors.h
+1659829874 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\colors.h
 
-1659825807 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\button\button.cpp
+1659826256 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\button\button.cpp
 	<iostream>
 	"../../widgets/button/button.h"
 	"../../canvas/gl_canvas2d.h"
@@ -293,4 +295,12 @@
 1659824529 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.cpp
 	"widget.h"
 	<iostream>
+
+1659831448 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.h
+	"../widget.h"
+	"../../canvas/gl_canvas2d.h"
+
+1659833029 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.cpp
+	"checkbox.h"
+	"../../utils/colors.h"
 

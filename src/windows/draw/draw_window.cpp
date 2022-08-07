@@ -8,7 +8,7 @@ DrawWindow::DrawWindow(int width, int height, Vector2 pos)
     this->pos = pos;
     widgets.push_back(new Button("Clear",
                                  new Color(255, 0, 0),
-                                 new Color(0), 50, height - 50, 100, 50,
+                                 new Color(0), 0, height - 50, 100, 50,
                                  clearPoints));
 }
 
