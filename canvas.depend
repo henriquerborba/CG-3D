@@ -209,7 +209,7 @@
 	<iostream>
 	<math.h>
 
-1659849103 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\main.cpp
+1659855059 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -240,19 +240,19 @@
 1659846598 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659849818 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1659855059 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 	"../../utils/Colors.h"
 
-1659846598 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
+1660167302 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
 1659851603 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
-1659852456 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+1660167550 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
 	<vector>
 	"../window.h"
 	"../draw/draw_window.h"
@@ -272,7 +272,7 @@
 	"../vectors/vector2.h"
 	"../vectors/Vector3.h"
 
-1659846598 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
+1660167302 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\vectors\vector3.h
 	<math.h>
 
 1659846599 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\button\button.h
@@ -301,7 +301,7 @@
 	"../widget.h"
 	"../../canvas/gl_canvas2d.h"
 
-1659851991 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.cpp
+1659855059 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.cpp
 	"checkbox.h"
 	"../../utils/colors.h"
 

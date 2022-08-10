@@ -13,6 +13,15 @@ ViewWindow::ViewWindow(int width, int height, Vector2 pos, DrawWindow *drawWindo
 
     widgets.push_back(new CheckBox(pos.x + 10, height - 30, 20, 20, new Color(4), "Perspectiva", [=]()
                                    { isPerspective = !isPerspective; }));
+
+    widgets.push_back(new CheckBox(pos.x + 10, height - 50, 20, 20, new Color(4), "Rotaciona no eixo X", [=]()
+                                   { rotatingX = !rotatingX; }));
+
+    widgets.push_back(new CheckBox(pos.x + 10, height - 70, 20, 20, new Color(4), "Rotaciona no eixo Y", [=]()
+                                   { rotatingY = !rotatingY; }));
+
+    widgets.push_back(new CheckBox(pos.x + 10, height - 90, 20, 20, new Color(4), "Rotaciona no eixo Z", [=]()
+                                   { rotatingZ = !rotatingZ; }));
 }
 
 void ViewWindow::render()
@@ -27,6 +36,18 @@ void ViewWindow::render()
     for (auto widget : widgets)
     {
         widget->Render();
+    }
+    if (rotatingX)
+    {
+        rotationX += 1;
+    }
+    if (rotatingY)
+    {
+        rotationY += 1;
+    }
+    if (rotatingZ)
+    {
+        rotationZ += 1;
     }
 }
 

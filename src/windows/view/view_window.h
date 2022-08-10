@@ -19,6 +19,7 @@ private:
     bool isPerspective = false;
     float translateX, translateY, translateZ;
     int rotationX = 0, rotationY = 0, rotationZ = 0;
+    bool rotatingX = false, rotatingY = false, rotatingZ = false;
 
 public:
     ViewWindow() = default;
