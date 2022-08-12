@@ -75,7 +75,7 @@ void DrawWindow::mouse(int button, int state, int wheel, int direction, int x, i
             }
 
             // Verifica se o clique foi em algum dos pontos existentes se foi, seleciona o ponto
-            for (int i = 0; i < points.size(); i++)
+            for (size_t i = 0; i < points.size(); i++)
             {
                 if (points[i].isInside(x, y))
                 {

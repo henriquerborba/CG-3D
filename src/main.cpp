@@ -15,7 +15,6 @@
 using namespace std;
 
 int screenWidth = 1368, screenHeight = 768; // largura e altura inicial da tela . Alteram com o redimensionamento de tela.
-int mouseX, mouseY;                         // variaveis globais do mouse para poder exibir dentro da render().
 
 DrawWindow *drawWindow = new DrawWindow(screenWidth / 2, screenHeight, Vector2(0, 0));                           // cria uma janela de desenho.
 ViewWindow *viewWindow = new ViewWindow(screenWidth / 2, screenHeight, Vector2(screenWidth / 2, 0), drawWindow); // cria uma janela de visualização.
@@ -32,26 +31,19 @@ void render()
 // funcao chamada toda vez que uma tecla for pressionada.
 void keyboard(int key)
 {
-   cout << "key: " << key << endl;
    viewWindow->keyboard(key);
 }
 
 // funcao chamada toda vez que uma tecla for liberada
 void keyboardUp(int key)
 {
-   printf("\nLiberou: %d", key);
 }
 
 // funcao para tratamento de mouse: cliques, movimentos e arrastos
 void mouse(int button, int state, int wheel, int direction, int x, int y)
 {
-   mouseX = x; // guarda as coordenadas do mouse para exibir dentro da render()
-   mouseY = y;
-
    drawWindow->mouse(button, state, wheel, direction, x, y);
    viewWindow->mouse(button, state, wheel, direction, x, y);
-
-   printf("\nmouse %d %d %d %d %d %d", button, state, wheel, direction, x, y);
 }
 
 int main(void)

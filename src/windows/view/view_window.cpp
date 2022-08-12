@@ -124,7 +124,7 @@ vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points, int hemisphere
     // rotaciona os pontos formando h hemisferios
     for (int c = 0; c < hemispheres; c++)
     {
-        for (int l = 0; l < points.size(); l++)
+        for (size_t l = 0; l < points.size(); l++)
         {
             float angle = c * (360 / hemispheres);
             Vector3 p = Vector3(points[l].x, points[l].y, 0);
@@ -140,9 +140,9 @@ vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points, int hemisphere
 
 void ViewWindow::draw(vector<vector<Vector2>> matrix)
 {
-    for (int l = 0; l < matrix.size(); l++)
+    for (size_t l = 0; l < matrix.size(); l++)
     {
-        for (int c = 0; c < matrix[l].size(); c++)
+        for (size_t c = 0; c < matrix[l].size(); c++)
         {
             if (c != matrix[l].size() - 1)
             {
@@ -157,9 +157,9 @@ void ViewWindow::draw(vector<vector<Vector2>> matrix)
 vector<vector<Vector2>> ViewWindow::projectPoints(vector<vector<Vector3>> matrix, bool perspectiveProjection)
 {
     vector<vector<Vector2>> projectedMatrix(matrix.size());
-    for (int c = 0; c < matrix.size(); c++)
+    for (size_t c = 0; c < matrix.size(); c++)
     {
-        for (int l = 0; l < matrix[c].size(); l++)
+        for (size_t l = 0; l < matrix[c].size(); l++)
         {
             projectedMatrix[c].push_back(
                 perspectiveProjection

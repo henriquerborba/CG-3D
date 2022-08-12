@@ -24,7 +24,7 @@ public:
             CV::point(p);
             curve.push_back(p);
         }
-        for (int i = 0; i < curve.size() - 1; i++)
+        for (size_t i = 0; i < curve.size() - 1; i++)
         {
             CV::line(curve[i], curve[i + 1]);
         }
