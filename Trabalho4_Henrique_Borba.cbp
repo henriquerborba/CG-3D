@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Canvas C++" />
+		<Option title="Trabalho 4 - Henrique Borba" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="../__bin/Debug/canvas" prefix_auto="1" extension_auto="1" />
+				<Option output="../__bin/Debug/Trabalho4_Henrique_Borba" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../" />
 				<Option object_output="../__obj/Debug/" />
 				<Option type="1" />
@@ -19,7 +19,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="../__bin/Release/canvas" prefix_auto="1" extension_auto="1" />
+				<Option output="../__bin/Release/Trabalho4_Henrique_Borba" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="../" />
 				<Option object_output="../__obj/Release/" />
 				<Option type="1" />
