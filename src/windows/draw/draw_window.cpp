@@ -1,6 +1,9 @@
 #include "./draw_window.h"
 #include "../../utils/Utils.h"
 #include "../../utils/Colors.h"
+#include <string>
+
+using namespace std;
 
 DrawWindow::DrawWindow(int width, int height, Vector2 pos)
 {
@@ -11,6 +14,21 @@ DrawWindow::DrawWindow(int width, int height, Vector2 pos)
                                  new Color(255, 0, 0),
                                  new Color(0), 0, height - 50, 100, 50,
                                  clearPoints));
+
+    widgets.push_back(new Button("Diminuir",
+                                 new Color(0),
+                                 new Color(4), 150, height - 100, 100, 50,
+                                 [=]()
+                                 {
+                                     step -= 1;
+                                 }));
+    widgets.push_back(new Button("Aumentar",
+                                 new Color(0),
+                                 new Color(4), 300, height - 100, 100, 50,
+                                 [=]()
+                                 {
+                                     step += 1;
+                                 }));
 }
 
 void DrawWindow::render()
@@ -19,7 +37,10 @@ void DrawWindow::render()
     CV::rectFill(pos, Vector2(width, height));
     CV::color(0, 0, 0);
     CV::rect(pos, Vector2(pos.x + width, pos.y + height));
-    curve = Utils::bezierCurve(points);
+    curve = Utils::bezierCurve(points, 1 / (float)step);
+
+    string text = "Numero de pontos que define a curva " + to_string(step);
+    CV::text(150, height - 40, text.c_str());
 
     for (auto widget : widgets)
     {
@@ -34,6 +55,13 @@ void DrawWindow::render()
 
 void DrawWindow::mouse(int button, int state, int wheel, int direction, int x, int y)
 {
+    for (auto widget : widgets)
+    {
+        if (widget->onClick(x, y, state))
+        {
+            return;
+        }
+    }
     // verifica se mouse está dentro da janela
     if (x > pos.x && x < pos.x + width && y > pos.y && y < pos.y + height)
     {
@@ -73,9 +101,5 @@ void DrawWindow::mouse(int button, int state, int wheel, int direction, int x, i
         {
             selected = -1;
         }
-    }
-    for (auto widget : widgets)
-    {
-        widget->onClick(x, y, state);
     }
 }

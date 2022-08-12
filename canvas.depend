@@ -226,7 +226,7 @@
 	"../vectors/Vector2.h"
 	"../widgets/button/button.h"
 
-1659846599 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
+1660265726 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.h
 	<vector>
 	"../window.h"
 	"../../point/point.h"
@@ -240,19 +240,20 @@
 1659846598 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\point\point.cpp
 	"point.h"
 
-1659855059 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
+1660265550 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\draw\draw_window.cpp
 	"./draw_window.h"
 	"../../utils/Utils.h"
 	"../../utils/Colors.h"
+	<string>
 
-1660167302 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
+1660264655 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\utils\utils.h
 	"../point/point.h"
 
-1659851603 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
+1660265369 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.cpp
 	"view_window.h"
 	"../../matrix/matrix.h"
 
-1660167550 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
+1660261847 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\windows\view\view_window.h
 	<vector>
 	"../window.h"
 	"../draw/draw_window.h"
@@ -260,14 +261,14 @@
 	"../../point/point.h"
 	"../../widgets/checkbox/checkbox.h"
 
-1659846598 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.cpp
+1660167301 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.cpp
 	<stdexcept>
 	<iostream>
 	<iomanip>
 	<math.h>
 	"matrix.h"
 
-1659846598 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.h
+1660167301 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\matrix\matrix.h
 	<iostream>
 	"../vectors/vector2.h"
 	"../vectors/Vector3.h"
@@ -280,7 +281,7 @@
 	"../../utils/colors.h"
 	<functional>
 
-1659846599 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.h
+1660198661 g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.h
 	"../utils/colors.h"
 	<functional>
 	<iostream>
@@ -293,7 +294,7 @@
 	"../../canvas/gl_canvas2d.h"
 	"../widget.h"
 
-1659846599 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.cpp
+1660197513 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\widget.cpp
 	"widget.h"
 	<iostream>
 
@@ -301,7 +302,7 @@
 	"../widget.h"
 	"../../canvas/gl_canvas2d.h"
 
-1659855059 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.cpp
+1660197513 source:g:\meu drive\cg\demos\trabalho4_henrique_borba\src\widgets\checkbox\checkbox.cpp
 	"checkbox.h"
 	"../../utils/colors.h"
 

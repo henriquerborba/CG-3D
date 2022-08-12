@@ -1,14 +1,28 @@
 # Geração de objeto 3d com sweep e curvas
 
-## Desenho
+## Recursos implementados
+
+### Basicos
+ - Modelagem do objeto com opção de rotação e translação, para geração de objetos como garrafas, donuts e molas
+ - Visualização ortográfica e perspectiva (sob vários ângulos) em wireframe, com uso de triângulos
+ - Parametrização do número de pontos e faces do objeto gerado.
+
+### Extra
+ - Adição de mais de 4 pontos de controle, é possível adicionar "n" pontos de controle
+ - 
+
+
+## Manual de Usuario
+### Desenho
 
  - Desenhe curvas clicando na janela da esquerda, será feito uma rotação ao redor do eixo y para gerar a figura, que será mostrada na janela de visualização na direita
  - Mova os pontos criados clicando e arrastando
  - Limpe os pontos criados clicando no botção clear no canto superior esquerdo da janela
+ - Aumente a quantidade de pontos na curva clicando nos botões
 
-## Visualização
+### Visualização
  
  - Visualização ortográfica e perspectiva, altere o modo de visualização clicando no checkBox
  - Use as setas do teclado para tranladar o objeto no eixo x e y, e as teclas + e - para transladar no eixo z
- - Clique e arraste para rotacionar a figura
- - Clique nos botões para aumentar o número de pontos na horizontal e na vertical o número de faces será descrito ao lado
+ - Clique nos checkbox de rotação para habilitar a rotação no eixo x, y, ou z
+ - Aumente a quantidade de pontos que definem a curva(Se aumentar muito o programa ficará pesada e irá travar, não existe limitação)

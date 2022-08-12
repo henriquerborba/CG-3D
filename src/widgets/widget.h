@@ -28,7 +28,9 @@ public:
         if (mx >= x && mx <= x + width && my >= y && my <= y + height && state == 0)
         {
             callBack();
+            return true;
         }
+        return false;
     }
 };
 

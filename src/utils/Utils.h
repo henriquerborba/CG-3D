@@ -8,13 +8,13 @@ class Utils
 {
 public:
     // função que desenha uma curva de bezier dado um vetor de pontos.
-    static vector<Vector2> bezierCurve(vector<Point> pontos)
+    static vector<Vector2> bezierCurve(vector<Point> pontos, float step = 0.01f)
     {
         vector<Vector2> curve;
         CV::color(0, 0, 0);
         int n = pontos.size() - 1;
         int nFatorial = factorial(n);
-        for (float t = 0; t < 1; t += 0.01)
+        for (float t = 0; t < 1; t += step)
         {
             Vector2 p = Vector2(0, 0);
             for (int i = 0; i <= n; i++)
@@ -23,6 +23,10 @@ public:
             }
             CV::point(p);
             curve.push_back(p);
+        }
+        for (int i = 0; i < curve.size() - 1; i++)
+        {
+            CV::line(curve[i], curve[i + 1]);
         }
         return curve;
     }

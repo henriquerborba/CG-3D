@@ -18,6 +18,7 @@ private:
     };
 
 public:
+    int step = 60;
     vector<Vector2> curve;
     vector<Point> points;
     DrawWindow() = default;

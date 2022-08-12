@@ -22,6 +22,21 @@ ViewWindow::ViewWindow(int width, int height, Vector2 pos, DrawWindow *drawWindo
 
     widgets.push_back(new CheckBox(pos.x + 10, height - 90, 20, 20, new Color(4), "Rotaciona no eixo Z", [=]()
                                    { rotatingZ = !rotatingZ; }));
+
+    widgets.push_back(new Button("Diminuir",
+                                 new Color(0),
+                                 new Color(4), pos.x + 250, height - 100, 100, 50,
+                                 [=]()
+                                 {
+                                     hemispheres -= 2;
+                                 }));
+    widgets.push_back(new Button("Aumentar",
+                                 new Color(0),
+                                 new Color(4), pos.x + 400, height - 100, 100, 50,
+                                 [=]()
+                                 {
+                                     hemispheres += 2;
+                                 }));
 }
 
 void ViewWindow::render()
@@ -30,8 +45,13 @@ void ViewWindow::render()
     CV::color(0, 0, 0);
     CV::rect(Vector2(0, 0), Vector2(width, height));
     points = drawWindow->curve;
-    pointsMatrix = sweep(points);
+    pointsMatrix = sweep(points, hemispheres);
     draw(projectPoints(pointsMatrix, isPerspective));
+    string text = "Quantidade de hemisferios: " + to_string(hemispheres);
+    CV::text(250, height - 40, text.c_str());
+    string faces_text = "Quantidade de faces: " + to_string(drawWindow->step * hemispheres * 2);
+    CV::text(250, height - 120, faces_text.c_str());
+
     CV::translate(0, 0);
     for (auto widget : widgets)
     {
@@ -98,15 +118,15 @@ void ViewWindow::keyboard(int key)
     }
 }
 
-vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points)
+vector<vector<Vector3>> ViewWindow::sweep(vector<Vector2> points, int hemispheres)
 {
-    vector<vector<Vector3>> matrix(18);
-    // rotaciona os pontos formando 18 hemisferios
-    for (int c = 0; c < 18; c++)
+    vector<vector<Vector3>> matrix(hemispheres);
+    // rotaciona os pontos formando h hemisferios
+    for (int c = 0; c < hemispheres; c++)
     {
         for (int l = 0; l < points.size(); l++)
         {
-            float angle = c * 20;
+            float angle = c * (360 / hemispheres);
             Vector3 p = Vector3(points[l].x, points[l].y, 0);
             p = Matrix::rotateY(angle) * p;
             p = Matrix::rotateX(rotationX) * Matrix::rotateY(rotationY) * Matrix::rotateZ(rotationZ) * p;
@@ -126,10 +146,10 @@ void ViewWindow::draw(vector<vector<Vector2>> matrix)
         {
             if (c != matrix[l].size() - 1)
             {
-                CV::line(matrix[l][c], matrix[(l + 1) % matrix.size()][c]);
-                CV::line(matrix[l][c], matrix[l][(c + 1) % matrix[l].size()]);
                 CV::line(matrix[l][c], matrix[(l + 1) % matrix.size()][(c + 1) % matrix[l].size()]);
+                CV::line(matrix[l][c], matrix[l][(c + 1) % matrix[l].size()]);
             }
+            CV::line(matrix[l][c], matrix[(l + 1) % matrix.size()][c]);
         }
     }
 }

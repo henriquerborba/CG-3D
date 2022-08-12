@@ -20,6 +20,7 @@ private:
     float translateX, translateY, translateZ;
     int rotationX = 0, rotationY = 0, rotationZ = 0;
     bool rotatingX = false, rotatingY = false, rotatingZ = false;
+    int hemispheres = 18;
 
 public:
     ViewWindow() = default;
@@ -28,7 +29,7 @@ public:
     virtual void render();
     virtual void mouse(int button, int state, int wheel, int direction, int x, int y);
     void keyboard(int key);
-    vector<vector<Vector3>> sweep(vector<Vector2> points);
+    vector<vector<Vector3>> sweep(vector<Vector2> points, int hemispheres);
     void draw(vector<vector<Vector2>> matrix);
     vector<vector<Vector2>> projectPoints(vector<vector<Vector3>> matrix, bool perspectiveProjection);
 };
